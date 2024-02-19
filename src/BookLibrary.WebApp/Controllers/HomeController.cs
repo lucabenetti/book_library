@@ -1,5 +1,6 @@
 ﻿using BookLibrary.WebApp.ApiRepositories;
 using BookLibrary.WebApp.Models;
+using BookLibrary.WebApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookLibrary.WebApp.Controllers
@@ -23,7 +24,14 @@ namespace BookLibrary.WebApp.Controllers
         {
             var result = await _bookApiRepository.GetBooksAsync(model.ToBookRequestModel());
 
-            return View("Search", model);
+            var viewModel = new SearchViewModel()
+            {
+                Books = result?.Select(x => new BookViewModel(x)),
+                SearchType = model.SearchType,
+                SearchValue = model.SearchValue
+            };
+
+            return View("Search", viewModel);
         }
     }
 }

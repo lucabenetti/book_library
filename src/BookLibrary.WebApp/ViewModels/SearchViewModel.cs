@@ -1,5 +1,6 @@
 ﻿using BookLibrary.Core.Models.Response;
 using BookLibrary.Domain.Enums;
+using BookLibrary.WebApp.ViewModels;
 
 namespace BookLibrary.WebApp.Models
 {
@@ -7,6 +8,8 @@ namespace BookLibrary.WebApp.Models
     {
         public SearchType SearchType { get; set; } 
         public string? SearchValue { get; set; }
+
+        public IEnumerable<BookViewModel> Books { get; set; } = new List<BookViewModel>();
 
         public BookRequestModel ToBookRequestModel()
         {

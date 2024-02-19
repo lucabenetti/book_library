@@ -4,6 +4,11 @@ namespace BookLibrary.Core.Models.Response
 {
     public class BookResponseModel
     {
+        public BookResponseModel()
+        {
+            
+        }
+
         public BookResponseModel(Book book)
         {
             Title = book.Title;
