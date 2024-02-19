@@ -23,6 +23,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookLibrary.Data", "src\BookLibrary.Data\BookLibrary.Data.csproj", "{355315C8-217E-4DBF-89A5-4F626CA74063}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{C83FCB98-26B9-4120-9729-90320A70FC53}"
+	ProjectSection(SolutionItems) = preProject
+		docker\.env = docker\.env
+		docker\docker-compose-local.yml = docker\docker-compose-local.yml
+		docker\docker-compose.yml = docker\docker-compose.yml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{CD2AF028-60E2-49A5-8D85-60AF5E9D7294}"
 EndProject
@@ -30,15 +35,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{E1C526
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookLibrary.API", "src\BookLibrary.API\BookLibrary.API.csproj", "{1DA96777-7483-4F82-90BC-4220D5473144}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookLibrary.WebApp", "src\BookLibrary.WebApp\BookLibrary.WebApp.csproj", "{1225E6A9-FD72-43F7-8492-D01FCBA9A99A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookLibrary.WebApp", "src\BookLibrary.WebApp\BookLibrary.WebApp.csproj", "{1225E6A9-FD72-43F7-8492-D01FCBA9A99A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{46E2BB60-1DB5-41C0-8715-546EF3A1FC26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookLibrary.Core", "src\BookLibrary.Core\BookLibrary.Core.csproj", "{3CB0E3AB-5E9B-4660-8B59-3B497C97DF20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookLibrary.Core", "src\BookLibrary.Core\BookLibrary.Core.csproj", "{3CB0E3AB-5E9B-4660-8B59-3B497C97DF20}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{61B0826D-39D9-4DD9-8CD8-9F158855E098}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookLibrary.Domain.Tests", "src\BookLibrary.Domain.Tests\BookLibrary.Domain.Tests.csproj", "{2E7110F7-1EE9-4814-981B-C005AA6010F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookLibrary.Domain.Tests", "src\BookLibrary.Domain.Tests\BookLibrary.Domain.Tests.csproj", "{2E7110F7-1EE9-4814-981B-C005AA6010F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

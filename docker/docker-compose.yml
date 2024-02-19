@@ -28,6 +28,7 @@ services:
         - booklibrary-net
     environment:
         - ASPNETCORE_ENVIRONMENT=Local
+        - API_URL=http://api:80/
     depends_on:
       - sqlserver
       
