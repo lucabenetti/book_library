@@ -14,6 +14,8 @@ namespace BookLibrary.WebApp
 
             builder.Services.AddScoped<IBookApiRepository, BookApiRepository>();
 
+            builder.Services.AddHttpClient();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

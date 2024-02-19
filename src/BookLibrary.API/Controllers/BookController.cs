@@ -1,6 +1,4 @@
-﻿using BookLibrary.API.Models.Request;
-using BookLibrary.API.Models.Response;
-using BookLibrary.Core;
+﻿using BookLibrary.Core.Models.Response;
 using BookLibrary.Domain.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
