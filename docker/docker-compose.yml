@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  
+  sqlserver:
+    container_name: booklibrary-sql-server
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    hostname: localhost
+    ports:
+    - 1433:1433
+    networks:
+        - booklibrary-net
+    environment:
+    - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
+    - MSSQL_PID=${MSSQL_PID}
+    - ACCEPT_EULA=Y
+  
+  webapp:
+    container_name: booklibrary-webapp
+    image: booklibrary-webapp:latest
+    restart: on-failure
+    build:
+      context: ../.
+      dockerfile: ./src/BookLibrary.WebApp/Dockerfile
+    ports:
+        - 5020:80
+    networks:
+        - booklibrary-net
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Local
+    depends_on:
+      - sqlserver
+      
+  api:
+    container_name: booklibrary-api
+    image: booklibrary-api:latest
+    restart: on-failure
+    build:
+      context: ../.
+      dockerfile: ./src/BookLibrary.API/Dockerfile
+    ports:
+        - 5010:80
+    networks:
+        - booklibrary-net
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Local
+    depends_on:
+      - sqlserver
+
+networks:
+  booklibrary-net:
+    name: docker-compose.env/booklibrary-net
