@@ -2,7 +2,8 @@
 {
     public enum SearchType
     {
-        Author = 0,
+        None = 0,
+        Author = 1,
         ISBN,
         Title,
         Category

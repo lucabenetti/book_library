@@ -1,4 +1,7 @@
 ﻿using BookLibrary.Data.Context;
+using BookLibrary.Data.Repositories;
+using BookLibrary.Domain.Contracts;
+using BookLibrary.Domain.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookLibrary.API.Extensions
@@ -9,6 +12,19 @@ namespace BookLibrary.API.Extensions
         {
             RegisterApiServices(services);
             RegisterDatabase(services, configuration);
+
+            RegisterRepositories(services);
+            RegisterServices(services);
+        }
+
+        private static void RegisterRepositories(IServiceCollection services)
+        {
+            services.AddScoped<IBookRepository, BookRepository>();
+        }
+
+        private static void RegisterServices(IServiceCollection services)
+        {
+            services.AddScoped<IBookService, BookService>();
         }
 
         private static void RegisterApiServices(IServiceCollection services)

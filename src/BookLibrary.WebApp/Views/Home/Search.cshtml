@@ -1,0 +1,38 @@
+﻿@using BookLibrary.Domain.Enums;
+@model SearchViewModel
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-6 d-flex">
+            <h2>Get books</h2>
+        </div>
+    </div>
+</div>
+
+<form asp-action="SearchPost" id="form" method="post">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <select class="form-control"
+                    asp-for="SearchType"
+                    asp-items="@Html.GetEnumSelectList<SearchType>()">
+            </select>
+            <div class="col-sm-6 d-flex">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group col-sm-9">
+                    <input asp-for="SearchValue" class="form-control" />
+                    <span asp-validation-for="SearchValue" class="text-danger"></span>
+                </div>
+
+                <div class="col-sm-1"></div>
+
+                <div class="form-group col-sm-3">
+                    <input type="submit" value="Search" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -18,13 +18,13 @@ namespace BookLibrary.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAsync(BookRequestModel model)
+        public async Task<IActionResult> GetAsync([FromQuery]BookRequestModel model)
         {
             var result = await _bookService.GetAsync(model.SearchType, model.SearchValue);
 
             var response = result?.Select(x => new BookResponseModel(x));
 
-            return Ok(Result<IEnumerable<BookResponseModel>>.Success(response));
+            return Ok(response);
         }
     }
 }

@@ -5,3 +5,12 @@
 /.vs/BookLibrary
 /src/BookLibrary.Data/obj
 /src/BookLibrary.Domain/obj
+/src/BookLibrary.API/obj
+/src/BookLibrary.Core/obj/Debug/net7.0
+/src/BookLibrary.API/bin/Debug/net7.0
+/.vs/ProjectEvaluation
+/src/BookLibrary.Core/bin/Debug/net7.0
+/src/BookLibrary.Core/obj
+/src/BookLibrary.Data/bin/Debug/net7.0
+/src/BookLibrary.Domain/bin/Debug/net7.0
+/src/BookLibrary.WebApp/obj

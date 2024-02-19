@@ -1,6 +1,6 @@
 ﻿using BookLibrary.Domain.Entities;
 
-namespace BookLibrary.API.Models.Response
+namespace BookLibrary.Core.Models.Response
 {
     public class BookResponseModel
     {
